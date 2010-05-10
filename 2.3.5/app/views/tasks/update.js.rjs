@@ -1,0 +1,5 @@
+page.replace dom_id(@task), :partial => @task
+task_id = @task.id
+@task = Task.new
+page.replace "edit_task_#{task_id}", :partial => "form"
+page.select(".new_task").first.reset

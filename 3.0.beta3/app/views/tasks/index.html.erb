@@ -1,0 +1,18 @@
+<% title "Task List" %>
+
+<table id="tasks">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Due Date</th>
+    <th>Finished</th>
+  </tr>
+  <% for task in @tasks %>
+    <%= render task %>
+  <% end %>
+</table>
+
+<h2>Task Form</h2>
+<div id="form">
+  <%= render :partial => "form" %>
+</div>

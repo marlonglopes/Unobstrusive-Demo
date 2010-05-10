@@ -1,0 +1,2 @@
+page.insert_html :bottom, "tasks", :partial => @task
+page.select(".new_task").first.reset

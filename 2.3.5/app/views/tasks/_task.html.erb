@@ -1,0 +1,10 @@
+<tr id="<%= dom_id task %>">
+  <td><%=h task.name %></td>
+  <td><%=h task.description %></td>
+  <td><%=h task.due_date %></td>
+  <td><%=h task.finished %></td>
+  <td><%= link_to "Show", task %></td>
+  <td><%= link_to_remote "Edit", :url => edit_task_path(task), :method => :get %></td>
+  <td><%= link_to_remote "Destroy", :url => task_path(task), :confirm => 'Are you sure?', :method => :delete %></td>
+</tr>
+

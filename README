@@ -1,0 +1,24 @@
+This is a very trivial Task List scaffold app to compare the differences implementing Ajax in Rails 2.3.5 and the new Unobstrusive way in Rails 3.0 (beta 3). There are several better ways to implement this same example, but I tried to stick as close to the default Rails as I could, the exception being that I preferred jQuery for the 3.0 version.
+
+Both are configured for default SQLite3, so a simple "rake db:migrate" should suffice to configure both projects.
+
+Obviously, you will need to install Rails 3.0 beta 3 to test the "3.0.beta3" project. There are 2 ways you can accomplish that:
+
+  gem install rails --pre
+
+This will install the currently available Edge gems. Or you can grab the real latest iteration directly from Github:
+
+  git clone git://github.com/rails/rails.git
+  cd rails
+  rake gem
+  rake install
+
+At the moment of this project creation, there was a small bug in the generator class. You may experience this if you try to create a new 3.0 project and the "rails" command line dumps an error. You will need to comment out line 6 at railties/lib/rails/generators.rb, the line that requires the missing  'singleton_class.rb' file. Other than that, it all should work fine.
+
+Remembering that to start a server in a Rails 2.3.5 project you do:
+
+  ./script/server
+
+But at Rails 3 you do:
+
+  ./script/rails s
